@@ -16,7 +16,7 @@ router.post(
         'Invalid password. Password must be within 4 and 20 characters.'
       ),
   ],
-  (req: Request, res: Response) => {
+  async (req: Request, res: Response) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
